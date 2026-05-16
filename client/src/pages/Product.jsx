@@ -13,7 +13,7 @@ const Product = () => {
 
   const getProductData=async()=>{
     try {
-      const response=await axios.get(backendUrl+'/api/product/list');
+      const response=await axios.get('http://localhost:4000/api/product/list');
       if(response.data.success){
         setProductList(response.data.products)
         setFilteredList(response.data.products);
